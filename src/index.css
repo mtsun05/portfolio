@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  font-family: "Barlow";
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  max-width: screen;
+}
