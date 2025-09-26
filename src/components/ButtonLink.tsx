@@ -20,7 +20,7 @@ const ButtonLink = ({ children, path, disabled }: ButtonLinkProps) => {
       </span>
     </a>
   ) : (
-    <a className="group px-5 py-2 mt-4 mr-2 text-sm rounded-full text-white bg-neutral-700 text-neutral-400 cursor-default w-fit h-fit relative dark:bg-neutral-500 dark:text-black">
+    <a className="group px-5 py-2 mt-4 mr-2 text-sm rounded-full text-white bg-neutral-700 text-neutral-400 cursor-default w-fit h-fit relative dark:bg-neutral-500 dark:text-black transition-all duration-400">
       <span className="relative transition duration-300 transform group-hover:-translate-x-3">
         {children}
       </span>

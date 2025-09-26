@@ -63,7 +63,7 @@ function App() {
         <div className="flex flex-col items-center mt-10 transition-all duration-300">
           <span
             id="projects"
-            className="text-4xl mb-5 font-bold bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white"
+            className="text-4xl mb-5 font-bold bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white transition-all duration-300"
           >
             Projects
           </span>
@@ -125,10 +125,10 @@ function App() {
             </span>
           </div>
         </div>
-        <span className="text-5xl mt-20 bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white">
+        <span className="text-5xl mt-20 bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white transition-all duration-300">
           Thank you for visiting!
         </span>
-        <footer className="mb-10 mt-40 bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white">
+        <footer className="mb-10 mt-40 bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white transition-all duration-300">
           Built by Michael Sun using React and TailwindCSS.
         </footer>
       </div>
