@@ -34,7 +34,7 @@ const ProjectCard = ({
           <ButtonLink disabled>Github</ButtonLink>
         )}
         {websiteURL ? (
-          <ButtonLink path={websiteURL}>Github</ButtonLink>
+          <ButtonLink path={websiteURL}>Website</ButtonLink>
         ) : (
           <ButtonLink disabled>Website</ButtonLink>
         )}
