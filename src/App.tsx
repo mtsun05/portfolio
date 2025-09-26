@@ -13,30 +13,30 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-center justify-center mx-auto mt-50 mb-10 w-5/6 lg:w-1/2 bg-gray-100 dark:bg-zinc-900">
+      <div className="flex flex-col items-center justify-center mx-auto mt-50 mb-10 w-5/6 lg:w-1/2 bg-[#f3f4f6] dark:bg-[#0d0d14] transition-all duration-300">
         <div
           id="home"
-          className="flex flex-col text-center w-full lg:w-2/3 bg-gray-100 dark:bg-zinc-900 text-black dark:text-white"
+          className="flex flex-col text-center w-full lg:w-2/3 bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white transition-all duration-300"
         >
           <span className="text-center text-8xl font-bold">Michael Sun</span>
           <span className="text-xl">
             I'm a junior at the{" "}
-            <span className="dark:text-white underline decoration-1 underline-offset-2 text-black">
+            <span className="dark:text-white underline decoration-1 underline-offset-2 text-black hover:font-bold transition-all duration-300">
               University of Illinois Urbana-Champaign
             </span>{" "}
             majoring in
-            <span className="dark:text-white underline decoration-1 underline-offset-2 text-black">
+            <span className="dark:text-white underline decoration-1 underline-offset-2 text-black hover:font-bold transition-all duration-300">
               {" "}
               Computer Science and Economics.
             </span>{" "}
             My interests lie in full-stack/frontend development and large scale
             systems. <br />
-            <span className="dark:text-white underline decoration-1 underline-offset-2 text-black">
+            <span className="dark:text-white underline decoration-1 underline-offset-2 text-black hover:font-bold transition-all duration-300">
               I'm currently seeking an internship for summer 2026.
             </span>
           </span>
         </div>
-        <div className="flex flex-col my-10 text-center bg-gray-100 dark:bg-zinc-900 text-black dark:text-white">
+        <div className="flex flex-col my-10 text-center bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white transition-all duration-300">
           <span className="dark:text-white text-4xl mb-5 text-black font-bold">
             My skillset
           </span>
@@ -44,7 +44,7 @@ function App() {
         </div>
         <div
           id="experience"
-          className="flex flex-col items-center mt-10 bg-gray-100 dark:bg-zinc-900 text-black dark:text-white"
+          className="flex flex-col items-center mt-10 bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white transition-all duration-300"
         >
           <span className="text-4xl mb-5 font-bold">Experience</span>
           <ExpCard label="Infrastructure Team Member" imgLink={IEMlogo}>
@@ -60,10 +60,10 @@ function App() {
             covering web fundamentals like HTTP and callbacks.
           </ExpCard>
         </div>
-        <div className="flex flex-col items-center mt-10">
+        <div className="flex flex-col items-center mt-10 transition-all duration-300">
           <span
             id="projects"
-            className="text-4xl mb-5 font-bold bg-gray-100 dark:bg-zinc-900 text-black dark:text-white"
+            className="text-4xl mb-5 font-bold bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white"
           >
             Projects
           </span>
@@ -83,7 +83,6 @@ function App() {
             label="Chat App"
             techs="Go, Next.js, TypeScript"
             githubURL="https://github.com/mtsun05/chat-app"
-            websiteURL="https://link-sable-three.vercel.app"
           >
             This chat application uses WebSockets and Go channels to enable
             low-latency communication between multiple users. Manages multiple
@@ -92,11 +91,11 @@ function App() {
             functionality.
           </ProjectCard>
         </div>
-        <div className="flex flex-col items-center mt-10 bg-gray-100 dark:bg-zinc-900 text-black dark:text-white">
+        <div className="flex flex-col items-center mt-10 bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white transition-all duration-300">
           <span id="about" className="text-4xl mb-5 font-bold">
             About Me
           </span>
-          <div className="flex flex-col lg:flex-row">
+          <div className="flex flex-col lg:flex-row transition-all duration-300">
             <img
               className="rounded-lg size-[30rem] mx-2"
               src={portpic}
@@ -126,10 +125,10 @@ function App() {
             </span>
           </div>
         </div>
-        <span className="text-5xl mt-20 bg-gray-100 dark:bg-zinc-900 text-black dark:text-white">
+        <span className="text-5xl mt-20 bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white">
           Thank you for visiting!
         </span>
-        <footer className="mb-10 mt-40 bg-gray-100 dark:bg-zinc-900 text-black dark:text-white">
+        <footer className="mb-10 mt-40 bg-[#f3f4f6] dark:bg-[#0d0d14] text-black dark:text-white">
           Built by Michael Sun using React and TailwindCSS.
         </footer>
       </div>

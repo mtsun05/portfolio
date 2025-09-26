@@ -4,7 +4,7 @@ import LightDarkToggle from "./LightDarkToggle";
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-row justify-between items-center bg-white/50 backdrop-blur-sm text-3xl p-9 fixed left-0 right-0 top-0 border-b border-black dark:border-gray-100 z-50 text-black dark:bg-zinc-900 dark:text-white">
+    <nav className="flex flex-row justify-between items-center bg-white/50 backdrop-blur-sm text-3xl p-9 fixed left-0 right-0 top-0 border-b border-black dark:border-[#f3f4f66f] z-50 text-black dark:bg-[#0d0d14] dark:text-white transition-all duration-300">
       <div className="flex flex-row">
         <div className="group flex flex-col mx-2 w-fit">
           <a className="text-[20px] mb-0 transition duration-300" href="#">

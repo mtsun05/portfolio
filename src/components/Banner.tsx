@@ -11,7 +11,7 @@ interface BannerProps {
 
 const Banner = ({ icons }: BannerProps) => {
   return (
-    <div className="banner-wrapper rounded-xl flex w-full lg:w-1/4 mx-auto z-1 border-l border-r border-black/20">
+    <div className="banner-wrapper bg-[#f3f4f66f] dark:bg-[#0d0d14] rounded-xl flex max-w-screen lg:w-1/2 mx-auto z-1 border-l border-r border-black/20 transition-all duration-300">
       <div className="wrapper">
         <div className="icons">
           {icons.map(({ icon, label, color }) => (

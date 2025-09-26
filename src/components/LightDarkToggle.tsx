@@ -11,10 +11,13 @@ const LightDarkToggle = () => {
       "(prefers-color-scheme: dark)"
     ).matches;
 
+    document.body.style.transition =
+      "background-color 300ms cubic-bezier(0.4, 0, 0.2, 1)";
+
     if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
       setDark(true);
       document.documentElement.classList.add("dark");
-      document.body.style.backgroundColor = "#18181b";
+      document.body.style.backgroundColor = "#0d0d14";
     } else {
       setDark(false);
       document.documentElement.classList.remove("dark");
@@ -28,7 +31,7 @@ const LightDarkToggle = () => {
 
     if (newTheme) {
       document.documentElement.classList.add("dark");
-      document.body.style.backgroundColor = "#18181b";
+      document.body.style.backgroundColor = "#0d0d14";
       localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
