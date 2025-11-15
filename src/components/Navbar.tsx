@@ -7,34 +7,37 @@ const Navbar = () => {
     <nav className="flex flex-row justify-between items-center text-3xl p-9 fixed left-0 right-0 top-0 dark:border-[#f3f4f66f] z-50 text-black dark:text-white bg-neutral-100 dark:bg-[#131313] drop-shadow-xl drop-shadow-black/10 transition-all duration-300">
       <div className="flex flex-row">
         <div className="group flex flex-col mx-2 w-fit">
-          <a className="text-[20px] mb-0 transition duration-300" href="#">
+          <a className="text-[20px] mb-0 transition-all duration-300" href="#">
             home
           </a>
-          <span className="relative dark:bg-white -top-0.5 bg-black h-[1px] transition-transform duration-500 origin-left scale-x-0 group-hover:scale-x-100"></span>
+          <span className="relative dark:bg-white -top-0.5 bg-black h-[1px] transition-transform duration-300 origin-center scale-x-0 group-hover:scale-x-100"></span>
         </div>
         <div className="group flex flex-col mx-2 w-fit">
           <a
-            className="text-[20px] mb-0 transition duration-300"
+            className="text-[20px] mb-0 transition-all duration-300"
             href="#experience"
           >
             experience
           </a>
-          <span className="relative dark:bg-white -top-0.5 bg-black h-[1px] transition-transform duration-500 origin-left scale-x-0 group-hover:scale-x-100"></span>
+          <span className="relative dark:bg-white -top-0.5 bg-black h-[1px] transition-transform duration-300 origin-center scale-x-0 group-hover:scale-x-100"></span>
         </div>
         <div className="group flex flex-col mx-2 w-fit">
           <a
-            className="text-[20px] mb-0 transition duration-300"
+            className="text-[20px] mb-0 transition-all duration-300"
             href="#projects"
           >
             projects
           </a>
-          <span className="relative dark:bg-white -top-0.5 bg-black h-[1px] transition-transform duration-500 origin-left scale-x-0 group-hover:scale-x-100"></span>
+          <span className="relative dark:bg-white -top-0.5 bg-black h-[1px] transition-transform duration-300 origin-center scale-x-0 group-hover:scale-x-100"></span>
         </div>
         <div className="group flex flex-col mx-2 w-fit">
-          <a className="text-[20px] mb-0 transition duration-300" href="#about">
+          <a
+            className="text-[20px] mb-0 transition-all duration-300"
+            href="#about"
+          >
             about
           </a>
-          <span className="relative dark:bg-white -top-0.5 bg-black h-[1px] transition-transform duration-500 origin-left scale-x-0 group-hover:scale-x-100"></span>
+          <span className="relative dark:bg-white -top-0.5 bg-black h-[1px] transition-transform duration-300 origin-center scale-x-0 group-hover:scale-x-100"></span>
         </div>
       </div>
       <div className="flex flex-row justify-end">

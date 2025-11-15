@@ -9,7 +9,8 @@ const Card = ({ icon: Icon }: CardProps) => {
   return (
     <IconContext.Provider
       value={{
-        className: "text-black dark:text-white transition-all duration-300",
+        className:
+          "text-neutral-500 dark:text-neutral-400 transition-all duration-300",
       }}
     >
       <div className="icon flex flex-col size-[100px] justify-center items-center rounded-2xl p-5 mx-3 my-2 transition-all duration-300 hover:-translate-y-2 dark:text-white">

@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-center justify-center mx-auto pt-50 mb-10 bg-radial-[at_50%_10%] from-10% dark:from-[#202020] dark:to-black from-white to-neutral-100 transition-all duration-300">
+      <div className="flex flex-col items-center justify-center mx-auto pt-50 mb-10 bg-radial-[at_50%_10%] from-10% dark:from-[#202020] dark:to-black from-white to-neutral-100">
         <div
           ref={homeRef}
           id="home"
@@ -50,7 +50,7 @@ function App() {
         >
           <span
             id="home"
-            className="flex flex-row font-[550] text-7xl md:text-9xl z-10"
+            className="flex flex-row font-[700] text-7xl md:text-9xl z-10"
           >
             Michael Sun
           </span>
@@ -67,7 +67,7 @@ function App() {
               rel="noopener noreferrer"
             >
               <span>mtsun05@gmail.com</span>
-              <TbArrowUpRight className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300" />
+              <TbArrowUpRight className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-300" />
             </a>
             <a
               href="https://github.com/mtsun05"
@@ -76,7 +76,7 @@ function App() {
               rel="noopener noreferrer"
             >
               <span>github.com/mtsun05</span>
-              <TbArrowUpRight className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300" />
+              <TbArrowUpRight className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-300" />
             </a>
             <a
               href="https://linkedin.com/in/michael-t-sun"
@@ -85,7 +85,7 @@ function App() {
               rel="noopener noreferrer"
             >
               <span>linkedin.com/in/michael-t-sun</span>
-              <TbArrowUpRight className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300" />
+              <TbArrowUpRight className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-300" />
             </a>
           </div>
         </div>
@@ -184,49 +184,49 @@ function App() {
           </span>
           <div className="flex flex-col lg:flex-row items-center transition-all duration-1000">
             <img
-              className="rounded-lg object-cover size-[2/3] lg:size-1/3 lg:mr-10 mb-10"
+              className="rounded-lg object-cover size-[2/3] lg:size-1/3 lg:mr-10 lg:mb-0 mb-10"
               src={portpic}
               alt=""
             />
             <div className="flex flex-col gap-3">
               <div className="flex flex-row justify-between gap-10">
                 <FaHome className="size-[70px]" />
-                <span className="text-xl">
+                <span className="text-xl text-neutral-500 dark:text-neutral-400">
                   I'm from Barrington, IL, a suburb 45 minutes away from
                   Chicago. I've lived in the Chicagoland area my whole life.
                 </span>
               </div>
               <div className="flex flex-row justify-between gap-10">
                 <HiOutlineSwitchHorizontal className="size-[70px]" />
-                <span className="text-xl">
+                <span className="text-xl text-neutral-500 dark:text-neutral-400">
                   I entered UIUC as a Psychology major, but decided it wasn't
                   for me and pivoted to Computer Science.
                 </span>
               </div>
               <div className="flex flex-row justify-between gap-10">
                 <MdComputer className="size-[70px]" />
-                <span className="text-xl">
+                <span className="text-xl text-neutral-500 dark:text-neutral-400">
                   I've learned everything I know about computer science and
                   software engineering in the last two years.
                 </span>
               </div>
               <div className="flex flex-row justify-between gap-10">
                 <LuPenTool className="size-[70px]" />
-                <span className="text-xl">
+                <span className="text-xl text-neutral-500 dark:text-neutral-400">
                   I have a strong background in graphic design, utilizing
                   technologies like Adobe Illustrator and Figma.
                 </span>
               </div>
               <div className="flex flex-row justify-between gap-10">
                 <FaSpotify className="size-[70px]" />
-                <span className="text-xl">
+                <span className="text-xl text-neutral-500 dark:text-neutral-400">
                   To name a few, my favorite artists include Nujabes, The
                   Strokes, MF DOOM, and other indie artists from various genres.
                 </span>
               </div>
               <div className="flex flex-row justify-between gap-10">
                 <FaVolleyball className="size-[70px]" />
-                <span className="text-xl">
+                <span className="text-xl text-neutral-500 dark:text-neutral-400">
                   I've been playing volleyball since high school. I mainly play
                   indoor but I'm down for any format. I enjoy many other sports
                   too!

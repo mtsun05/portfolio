@@ -31,12 +31,12 @@ const ProjectCard = ({
       <span className="text-neutral-500 dark:text-neutral-400">{children}</span>
       <div className="flex flex-row items-center gap-3 mt-3">
         {githubURL ? (
-          <a href={githubURL}>
+          <a href={githubURL} target="_blank">
             <IoLogoGithub className="size-[30px] dark:hover:text-neutral-300 hover:text-neutral-600 transition-all duration-300" />
           </a>
         ) : null}
         {websiteURL ? (
-          <a href={websiteURL}>
+          <a href={websiteURL} target="_blank">
             <CiGlobe className="size-[30px] dark:hover:text-neutral-300 hover:text-neutral-600 transition-all duration-300" />
           </a>
         ) : null}
