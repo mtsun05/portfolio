@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  font-family: "Barlow";
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100vw;
+}
+
+.gradient-left-light {
+  background-image: linear-gradient(90deg, #fafafa, rgba(255, 255, 255, 0));
+}
+
+.gradient-left-black {
+  background-image: linear-gradient(90deg, #0f0f0f, rgba(255, 255, 255, 0));
+}
