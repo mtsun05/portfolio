@@ -19,3 +19,34 @@ body,
 .gradient-left-black {
   background-image: linear-gradient(90deg, #0f0f0f, rgba(255, 255, 255, 0));
 }
+
+nav {
+  /* background-image: linear-gradient(
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.3) 12.5%,
+    rgba(0, 0, 0, 0.15) 25%,
+    rgba(0, 0, 0, 0.075) 50%,
+    rgba(0, 0, 0, 0.035) 80%,
+    rgba(0, 0, 0, 0.01) 90%,
+    rgba(0, 0, 0, 0) 100%
+  ); */
+
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.3) 12%,
+    rgba(0, 0, 0, 0.15) 17.15%,
+    rgba(0, 0, 0, 0.075) 24.5%,
+    rgba(0, 0, 0, 0.037) 35%,
+    rgba(0, 0, 0, 0.019) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  /* background-image: linear-gradient(
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.15) 65%,
+    rgba(0, 0, 0, 0.075) 75.5%,
+    rgba(0, 0, 0, 0.037) 82.85%,
+    rgba(0, 0, 0, 0.019) 88%,
+    rgba(0, 0, 0, 0) 100%
+  ); */
+}

@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-center justify-center mx-auto pt-50 mb-10 bg-radial-[at_50%_10%] from-10% dark:from-[#202020] dark:to-black from-white to-neutral-100">
+      <div className="flex flex-col items-center justify-center mx-auto mb-10 bg-radial-[at_50%_10%] from-10% dark:from-[#202020] dark:to-black from-white to-neutral-100">
         <div
           ref={homeRef}
           id="home"
@@ -46,7 +46,7 @@ function App() {
             homeVisible
               ? "opacity-100 blur-none translate-y-0"
               : "opacity-0 blur-lg translate-y-30"
-          } transition-all duration-1000 flex flex-col text-center justify-center items-center lg:w-2/3 mx-10 text-black dark:text-white mb-20`}
+          } transition-all duration-1000 flex flex-col text-center justify-center items-center lg:w-2/3 mx-10 text-black dark:text-white mt-50 mb-20`}
         >
           <span
             id="home"
