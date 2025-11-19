@@ -1,59 +1,68 @@
-import { FaPython, FaNode, FaReact, FaDocker } from "react-icons/fa";
+import { FaGitAlt, FaNode, FaReact, FaDocker, FaAws } from "react-icons/fa";
 import { SiTypescript, SiMongodb } from "react-icons/si";
-import { PiFileCppFill } from "react-icons/pi";
-import { IoLogoJavascript } from "react-icons/io";
-import { FaGolang } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { SiExpress } from "react-icons/si";
+import { IoLogoGithub } from "react-icons/io";
 
 export const icons = [
   {
-    icon: FaPython,
-    color: "#ffe600",
-    label: "Python",
+    icon: FaReact,
+    color: "#30eeff",
+    label: "React",
+    desc: "Frontend & UI",
   },
   {
     icon: SiTypescript,
     color: "#007acc",
     label: "TypeScript",
+    desc: "Type-safe web dev",
   },
   {
-    icon: IoLogoJavascript,
+    icon: SiExpress,
     color: "#ffe600",
-    label: "JavaScript",
+    label: "Express.js",
+    desc: "APIs & backend logic",
   },
   {
     icon: FaNode,
     color: "#11801a",
     label: "Node.js",
-  },
-  {
-    icon: FaReact,
-    color: "#30eeff",
-    label: "React",
-  },
-  {
-    icon: FaGolang,
-    color: "#00ADD8",
-    label: "Go",
-  },
-  {
-    icon: PiFileCppFill,
-    color: "#00599C",
-    label: "C++",
+    desc: "Server-side JS",
   },
   {
     icon: RiTailwindCssFill,
     color: "#06b6d4",
     label: "TailwindCSS",
+    desc: "Styling",
   },
   {
     icon: FaDocker,
     color: "#22a4f5",
     label: "Docker",
+    desc: "Containerization & deployment",
   },
   {
     icon: SiMongodb,
     color: "#08522c",
     label: "MongoDB",
+    desc: "Database",
+  },
+  {
+    icon: FaAws,
+    color: "#ff9900",
+    label: "AWS",
+    desc: "Deployment & storage",
+  },
+  {
+    icon: FaGitAlt,
+    color: "#F1502F",
+    label: "Git",
+    desc: "Version control",
+  },
+  {
+    icon: IoLogoGithub,
+    color: "",
+    label: "Github",
+    desc: "Collaboration",
   },
 ];

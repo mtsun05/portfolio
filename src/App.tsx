@@ -1,16 +1,17 @@
 import "./App.css";
 import ProjectCard from "./components/ProjectCard";
 import ExpCard from "./components/ExpCard";
-import { icons } from "./icons";
 import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
+
+import { useTheme } from "./themeContext";
+import { useRef, useState } from "react";
+import { useIsVisible } from "./util/visibilityDetector";
 
 import IEMlogo from "./assets/iem-logo-removebg-preview.png";
 import illini from "./assets/illini-logo.png";
 import portpic from "./assets/portfolio-pic.jpg";
-import { useRef } from "react";
-import { useIsVisible } from "./util/visibilityDetector";
 
+import { icons } from "./icons";
 import { FaHome } from "react-icons/fa";
 import { HiOutlineSwitchHorizontal } from "react-icons/hi";
 import { MdComputer } from "react-icons/md";
@@ -18,8 +19,12 @@ import { LuPenTool } from "react-icons/lu";
 import { FaSpotify } from "react-icons/fa";
 import { FaVolleyball } from "react-icons/fa6";
 import { TbArrowUpRight } from "react-icons/tb";
+import { IconContext } from "react-icons/lib";
 
 function App() {
+  const { dark } = useTheme();
+  const [active, setActive] = useState<number>(-1);
+
   const homeRef = useRef<HTMLDivElement>(null);
   const homeVisible = useIsVisible(homeRef, 0.3);
 
@@ -46,7 +51,7 @@ function App() {
             homeVisible
               ? "opacity-100 blur-none translate-y-0"
               : "opacity-0 blur-lg translate-y-30"
-          } transition-all duration-1000 flex flex-col text-center justify-center items-center lg:w-2/3 mx-10 text-black dark:text-white mt-50 mb-20`}
+          } transition-all duration-1000 flex flex-col text-center justify-center items-center lg:w-2/3 mx-10 text-black dark:text-white mt-70 mb-20`}
         >
           <span
             id="home"
@@ -95,12 +100,45 @@ function App() {
             skillsVisible
               ? "opacity-100 blur-none translate-y-0"
               : "opacity-0 blur-lg translate-y-30"
-          } flex flex-col justify-center my-10 text-black dark:text-white transition-all duration-1000 lg:w-2/3 mx-10 mb-20`}
+          } flex flex-col justify-center my-10 transition-all duration-1000 lg:w-2/3 mx-10 mb-20`}
         >
-          <span className="dark:text-white mb-5 text-black italic text-5xl">
-            skills
-          </span>
-          <Banner icons={icons} />
+          <div
+            ref={skillsRef}
+            className="flex flex-row flex-wrap gap-3 justify-center"
+          >
+            {icons.map(({ icon: Icon, color, label, desc }, index) => {
+              return (
+                <div
+                  onMouseEnter={() => setActive(index)}
+                  onMouseLeave={() => setActive(-1)}
+                  className="flex flex-row bg-[#e6e6e6] dark:bg-[#121212] px-4 py-3 gap-5 w-[200px] rounded-lg items-center cursor-default transition-all duration-300"
+                >
+                  <IconContext.Provider
+                    value={{
+                      className: ``,
+                    }}
+                  >
+                    <div className="flex flex-col size-[30px] justify-center items-center rounded-2xl transition-all duration-300 dark:text-white">
+                      <Icon
+                        color={
+                          active == index ? color : dark ? "white" : "black"
+                        }
+                        className={"size-[70px] transition-all duration-300"}
+                      />
+                    </div>
+                  </IconContext.Provider>
+                  <div className="flex flex-col">
+                    <span className="text-sm text-black dark:text-white">
+                      {label}
+                    </span>
+                    <span className="text-wrap text-xs text-neutral-600 dark:text-neutral-400">
+                      {desc}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         <div
@@ -116,18 +154,15 @@ function App() {
             experience
           </span>
           <ExpCard label="Lead Frontend Developer" imgLink={IEMlogo}>
-            Leading the website redesign team in a complete overhaul of the club
-            website using React and TailwindCSS. Collaborating with club leads
-            to ensure consistent progress and accurate representation of the
-            club. Notably, implemented a 3D showcase of the car and deployed on
-            AWS.
+            Leading the website redesign team in a drastic improvement of the
+            club website. Modernizing and improving UI, reorganizing information
+            sections and making them more digestible, added a 3D showcase for
+            the team car, and working on deploying with AWS S3.
           </ExpCard>
           <ExpCard label="CS124 Course Staff" imgLink={illini}>
-            Held 1-on-1 tutoring sessions with a class of 1000+ students.
-            Assisted students with programming basics in Java, teaching topics
-            ranging from types and loops to encapsulation and inheritance.
-            Provided guidance on an end-of-year project in Android Studio,
-            covering web fundamentals like HTTP and callbacks.
+            Taught beginner programmers in 1-on-1 sessions about core
+            programming concepts in Java. Assisted students in an
+            end-of-the-year Android project.
           </ExpCard>
         </div>
         <div
@@ -150,22 +185,19 @@ function App() {
             githubURL="https://github.com/mtsun05/link"
             websiteURL="https://link-sable-three.vercel.app"
           >
-            Link is a full stack social community platform built for
-            centralizing events for clubs. User authentication was implemented
-            with both JWTs and OAuth2.0's sign in with Google. Currently working
-            on a team functionality, where users can specify team size and roles
-            and Link automatically generates random teams.
+            Social community platform built for centralizing events for clubs.
+            Implemented authentication with JWTs and OAuth2.0 (sign in with
+            Google). Users can create and join communities, as well as start and
+            register for events.
           </ProjectCard>
           <ProjectCard
             label="Chat App"
             techs="Go, Next.js, TypeScript"
             githubURL="https://github.com/mtsun05/chat-app"
           >
-            This chat application uses WebSockets and Go channels to enable
+            Chat application that uses WebSockets and Go channels to enable
             low-latency communication between multiple users. Manages multiple
             concurrent connections using a custom connection pool struct.
-            Looking into supporting multiple pools for a Discord/GroupMe kind of
-            functionality.
           </ProjectCard>
         </div>
         <div
@@ -184,49 +216,49 @@ function App() {
           </span>
           <div className="flex flex-col lg:flex-row items-center transition-all duration-1000">
             <img
-              className="rounded-lg object-cover size-[2/3] lg:size-1/3 lg:mr-10 lg:mb-0 mb-10"
+              className="rounded-lg object-cover size-1/2 lg:mr-10 lg:mb-0 mb-10"
               src={portpic}
               alt=""
             />
-            <div className="flex flex-col gap-3">
-              <div className="flex flex-row justify-between gap-10">
+            <div className="flex flex-col justify-between self-stretch gap-3">
+              <div className="group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
                 <FaHome className="size-[70px]" />
-                <span className="text-xl text-neutral-500 dark:text-neutral-400">
+                <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
                   I'm from Barrington, IL, a suburb 45 minutes away from
-                  Chicago. I've lived in the Chicagoland area my whole life.
+                  Chicago. I've lived in around here my whole life.
                 </span>
               </div>
-              <div className="flex flex-row justify-between gap-10">
+              <div className="group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
                 <HiOutlineSwitchHorizontal className="size-[70px]" />
-                <span className="text-xl text-neutral-500 dark:text-neutral-400">
+                <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
                   I entered UIUC as a Psychology major, but decided it wasn't
                   for me and pivoted to Computer Science.
                 </span>
               </div>
-              <div className="flex flex-row justify-between gap-10">
+              <div className="group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
                 <MdComputer className="size-[70px]" />
-                <span className="text-xl text-neutral-500 dark:text-neutral-400">
+                <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
                   I've learned everything I know about computer science and
                   software engineering in the last two years.
                 </span>
               </div>
-              <div className="flex flex-row justify-between gap-10">
+              <div className="group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
                 <LuPenTool className="size-[70px]" />
-                <span className="text-xl text-neutral-500 dark:text-neutral-400">
+                <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
                   I have a strong background in graphic design, utilizing
                   technologies like Adobe Illustrator and Figma.
                 </span>
               </div>
-              <div className="flex flex-row justify-between gap-10">
+              <div className="group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
                 <FaSpotify className="size-[70px]" />
-                <span className="text-xl text-neutral-500 dark:text-neutral-400">
-                  To name a few, my favorite artists include Nujabes, The
-                  Strokes, MF DOOM, and other indie artists from various genres.
+                <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
+                  My favorite artists are Nujabes and The Strokes, and I like
+                  artists from various other genres.
                 </span>
               </div>
-              <div className="flex flex-row justify-between gap-10">
+              <div className="group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
                 <FaVolleyball className="size-[70px]" />
-                <span className="text-xl text-neutral-500 dark:text-neutral-400">
+                <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
                   I've been playing volleyball since high school. I mainly play
                   indoor but I'm down for any format. I enjoy many other sports
                   too!

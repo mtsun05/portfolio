@@ -1,11 +1,7 @@
 import type { IconType } from "react-icons/lib";
 import { IconContext } from "react-icons/lib";
 
-interface CardProps {
-  icon: IconType;
-}
-
-const Card = ({ icon: Icon }: CardProps) => {
+const Card = ({ icon: Icon }: { icon: IconType }) => {
   return (
     <IconContext.Provider
       value={{

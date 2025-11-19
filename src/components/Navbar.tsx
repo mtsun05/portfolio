@@ -46,7 +46,7 @@ const Navbar = () => {
         <div className="flex ml-3">
           <IconLink
             icon={FaLinkedin}
-            color="#0A66C2"
+            color=""
             path="https://linkedin.com/in/michael-t-sun"
           />
           <IconLink

@@ -19,7 +19,7 @@ const ProjectCard = ({
   websiteURL,
 }: ExpCardProps) => {
   return (
-    <div className="flex flex-col bg-[#e6e6e6] dark:bg-[#010101] rounded-lg p-5 my-2 hover:ring-1 ring-neutral-600 cursor-default text-black dark:text-white transition-all duration-300">
+    <div className="flex flex-col bg-[#e6e6e6] dark:bg-[#121212] rounded-lg p-5 my-2 hover:ring-1 ring-neutral-600 cursor-default text-black dark:text-white transition-all duration-300">
       <div className="flex flex-row items-baseline mb-3 transition-all duration-300">
         <span className="text-xl font-bold">{label}</span>
         {techs && (
