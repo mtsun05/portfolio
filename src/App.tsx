@@ -2,29 +2,18 @@ import "./App.css";
 import ProjectCard from "./components/ProjectCard";
 import ExpCard from "./components/ExpCard";
 import Navbar from "./components/Navbar";
+import Skills from "./components/Skills.tsx";
+import About from "./components/About.tsx";
 
-import { useTheme } from "./themeContext";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useIsVisible } from "./util/visibilityDetector";
 
 import IEMlogo from "./assets/iem-logo-removebg-preview.png";
 import illini from "./assets/illini-logo.png";
-import portpic from "./assets/portfolio-pic.jpg";
 
-import { icons } from "./icons";
-import { FaHome } from "react-icons/fa";
-import { HiOutlineSwitchHorizontal } from "react-icons/hi";
-import { MdComputer } from "react-icons/md";
-import { LuPenTool } from "react-icons/lu";
-import { FaSpotify } from "react-icons/fa";
-import { FaVolleyball } from "react-icons/fa6";
 import { TbArrowUpRight } from "react-icons/tb";
-import { IconContext } from "react-icons/lib";
 
 function App() {
-  const { dark } = useTheme();
-  const [active, setActive] = useState<number>(-1);
-
   const homeRef = useRef<HTMLDivElement>(null);
   const homeVisible = useIsVisible(homeRef, 0.3);
 
@@ -36,9 +25,6 @@ function App() {
 
   const experienceRef = useRef<HTMLDivElement>(null);
   const experienceVisible = useIsVisible(experienceRef, 0.3);
-
-  const aboutRef = useRef<HTMLDivElement>(null);
-  const aboutVisible = useIsVisible(aboutRef, 0.3);
 
   return (
     <>
@@ -102,43 +88,7 @@ function App() {
               : "opacity-0 blur-lg translate-y-30"
           } flex flex-col justify-center my-10 transition-all duration-1000 lg:w-2/3 mx-10 mb-20`}
         >
-          <div
-            ref={skillsRef}
-            className="flex flex-row flex-wrap gap-3 justify-center"
-          >
-            {icons.map(({ icon: Icon, color, label, desc }, index) => {
-              return (
-                <div
-                  onMouseEnter={() => setActive(index)}
-                  onMouseLeave={() => setActive(-1)}
-                  className="flex flex-row bg-[#e6e6e6] dark:bg-[#121212] px-4 py-3 gap-5 w-[200px] rounded-lg items-center cursor-default transition-all duration-300"
-                >
-                  <IconContext.Provider
-                    value={{
-                      className: ``,
-                    }}
-                  >
-                    <div className="flex flex-col size-[30px] justify-center items-center rounded-2xl transition-all duration-300 dark:text-white">
-                      <Icon
-                        color={
-                          active == index ? color : dark ? "white" : "black"
-                        }
-                        className={"size-[70px] transition-all duration-300"}
-                      />
-                    </div>
-                  </IconContext.Provider>
-                  <div className="flex flex-col">
-                    <span className="text-sm text-black dark:text-white">
-                      {label}
-                    </span>
-                    <span className="text-wrap text-xs text-neutral-600 dark:text-neutral-400">
-                      {desc}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <Skills />
         </div>
 
         <div
@@ -200,73 +150,7 @@ function App() {
             concurrent connections using a custom connection pool struct.
           </ProjectCard>
         </div>
-        <div
-          ref={aboutRef}
-          className={`${
-            aboutVisible
-              ? "opacity-100 blur-none translate-y-0"
-              : "opacity-0 blur-lg translate-y-30"
-          } flex flex-col lg:w-2/3 mx-10 mt-10 text-black dark:text-white transition-all duration-1000`}
-        >
-          <span
-            id="about"
-            className="dark:text-white mb-5 text-black italic text-5xl"
-          >
-            about
-          </span>
-          <div className="flex flex-col lg:flex-row items-center transition-all duration-1000">
-            <img
-              className="rounded-lg object-cover size-1/2 lg:mr-10 lg:mb-0 mb-10"
-              src={portpic}
-              alt=""
-            />
-            <div className="flex flex-col justify-between self-stretch gap-3">
-              <div className="group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
-                <FaHome className="size-[70px]" />
-                <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
-                  I'm from Barrington, IL, a suburb 45 minutes away from
-                  Chicago. I've lived in around here my whole life.
-                </span>
-              </div>
-              <div className="group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
-                <HiOutlineSwitchHorizontal className="size-[70px]" />
-                <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
-                  I entered UIUC as a Psychology major, but decided it wasn't
-                  for me and pivoted to Computer Science.
-                </span>
-              </div>
-              <div className="group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
-                <MdComputer className="size-[70px]" />
-                <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
-                  I've learned everything I know about computer science and
-                  software engineering in the last two years.
-                </span>
-              </div>
-              <div className="group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
-                <LuPenTool className="size-[70px]" />
-                <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
-                  I have a strong background in graphic design, utilizing
-                  technologies like Adobe Illustrator and Figma.
-                </span>
-              </div>
-              <div className="group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
-                <FaSpotify className="size-[70px]" />
-                <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
-                  My favorite artists are Nujabes and The Strokes, and I like
-                  artists from various other genres.
-                </span>
-              </div>
-              <div className="group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
-                <FaVolleyball className="size-[70px]" />
-                <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
-                  I've been playing volleyball since high school. I mainly play
-                  indoor but I'm down for any format. I enjoy many other sports
-                  too!
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <About />
         <span className="text-5xl mt-20 text-black dark:text-white transition-all duration-1000">
           Thank you for visiting!
         </span>

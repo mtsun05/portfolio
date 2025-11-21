@@ -9,7 +9,7 @@ const LightDarkToggle = () => {
       className={`cursor-pointer ${dark ? "text-white" : "text-black"}`}
       onClick={toggleTheme}
     >
-      <div>{dark ? <IoMoonSharp /> : <IoSunnySharp />}</div>
+      {dark ? <IoMoonSharp /> : <IoSunnySharp />}
     </button>
   );
 };

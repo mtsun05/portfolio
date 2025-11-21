@@ -3,8 +3,14 @@ import { SiTypescript, SiMongodb } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress } from "react-icons/si";
 import { IoLogoGithub } from "react-icons/io";
+import type { IconType } from "react-icons/lib";
 
-export const icons = [
+export const icons: {
+  icon: IconType;
+  color: string;
+  label: string;
+  desc: string;
+}[] = [
   {
     icon: FaReact,
     color: "#30eeff",
