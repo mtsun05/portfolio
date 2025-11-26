@@ -33,7 +33,7 @@ const About = () => {
         },
         {
           opacity: 1,
-          duration: 2,
+          duration: 3,
           ease: "power4.out",
         }
       ).fromTo(
@@ -72,44 +72,44 @@ const About = () => {
           alt=""
         />
         <div className="flex flex-col justify-between self-stretch gap-3">
-          <div className="about-item group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
-            <FaHome className="size-[70px]" />
-            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
+          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-neutral-700/50 pr-5 py-3 rounded-2xl">
+            <FaHome className="size-[3.5em] mx-5" />
+            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
               I'm from Barrington, IL, a suburb 45 minutes away from Chicago.
-              I've lived in around here my whole life.
+              I've lived around here my whole life.
             </span>
           </div>
-          <div className="about-item group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
-            <HiOutlineSwitchHorizontal className="size-[70px]" />
-            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
+          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-neutral-700/50 pr-5 py-3 rounded-2xl">
+            <HiOutlineSwitchHorizontal className="size-[3.5em] mx-5" />
+            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
               I entered UIUC as a Psychology major, but decided it wasn't for me
               and pivoted to Computer Science.
             </span>
           </div>
-          <div className="about-item group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
-            <MdComputer className="size-[70px]" />
-            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
+          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-neutral-700/50 pr-5 py-3 rounded-2xl">
+            <MdComputer className="size-[3.5em] mx-5" />
+            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
               I've learned everything I know about computer science and software
               engineering in the last two years.
             </span>
           </div>
-          <div className="about-item group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
-            <LuPenTool className="size-[70px]" />
-            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
+          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-neutral-700/50 pr-5 py-3 rounded-2xl">
+            <LuPenTool className="size-[3.5em] mx-5" />
+            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
               I have a strong background in graphic design, utilizing
               technologies like Adobe Illustrator and Figma.
             </span>
           </div>
-          <div className="about-item group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
-            <FaSpotify className="size-[70px]" />
-            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
+          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-neutral-700/50 pr-5 py-3 rounded-2xl">
+            <FaSpotify className="size-[3.5em] mx-5" />
+            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
               My favorite artists are Nujabes and The Strokes, and I like
               artists from various other genres.
             </span>
           </div>
-          <div className="about-item group flex flex-row justify-around items-center gap-10 bg-[#e6e6e6] dark:bg-neutral-700/50 px-5 py-3 rounded-2xl">
-            <FaVolleyball className="size-[70px]" />
-            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500">
+          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-neutral-700/50 pr-5 py-3 rounded-2xl">
+            <FaVolleyball className="size-[3.5em] mx-5" />
+            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
               I've been playing volleyball since high school. I mainly play
               indoor but I'm down for any format. I enjoy many other sports too!
             </span>
