@@ -1,7 +1,7 @@
 import IconLink from "./IconLink";
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
 import LightDarkToggle from "./LightDarkToggle";
-import { FiArrowRight, FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
 
 const Navbar = () => {

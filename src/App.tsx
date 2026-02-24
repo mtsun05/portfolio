@@ -17,7 +17,7 @@ import { TbArrowUpRight } from "react-icons/tb";
 import { useTheme } from "./themeContext.tsx";
 
 function App() {
-  const { dark, toggleTheme } = useTheme();
+  const { dark } = useTheme();
   const homeRef = useRef<HTMLDivElement>(null);
   const homeVisible = useIsVisible(homeRef, 0.3);
 
