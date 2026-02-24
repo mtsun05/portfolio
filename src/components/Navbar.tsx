@@ -8,7 +8,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <nav className="flex flex-row fixed left-0 right-0 top-0 dark:border-[#f3f4f66f] z-50 text-black dark:text-white drop-shadow-xl drop-shadow-black/10 transition-all duration-300">
-      <div className="hidden md:flex md:flex-row w-full justify-between items-center p-5 text-3xl">
+      <div className="hidden md:flex md:flex-row w-full justify-between items-center p-8 text-3xl">
         <div className="flex flex-row gap-3">
           <div className="group flex flex-col mx-2 w-fit">
             <a

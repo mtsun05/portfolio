@@ -14,26 +14,26 @@ const Skills = () => {
 
   useEffect(() => {
     if (wrapper.current) {
-      gsap.set(".skill-card", {
-        opacity: 0,
-        y: 30,
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: wrapper.current,
+          start: "top bottom",
+          once: true,
+          toggleActions: "play none none none",
+        },
       });
 
-      let tl = gsap.timeline();
-
-      tl.to(
+      tl.fromTo(
         ".skill-card",
+        {
+          opacity: 0,
+          y: -30,
+        },
         {
           opacity: 1,
           y: 0,
           stagger: { amount: 0.5 },
           ease: "back.in",
-          scrollTrigger: {
-            trigger: wrapper.current,
-            start: "top bottom",
-            once: true,
-            toggleActions: "play none none none",
-          },
         },
         0.3,
       );
@@ -50,7 +50,7 @@ const Skills = () => {
           <div
             onMouseEnter={() => setActive(index)}
             onMouseLeave={() => setActive(-1)}
-            className="skill-card flex flex-row bg-[#e6e6e6] dark:bg-[#151515] px-4 py-3 gap-5 w-[200px] rounded-lg items-center cursor-default transition-all duration-300"
+            className="skill-card flex flex-row bg-[#e6e6e6] dark:bg-[#151515] px-4 py-3 gap-5 w-40 md:w-50 rounded-lg items-center cursor-default transition-all duration-300"
           >
             <IconContext.Provider
               value={{

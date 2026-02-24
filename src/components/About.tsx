@@ -2,7 +2,7 @@ import { FaHome } from "react-icons/fa";
 import { HiOutlineSwitchHorizontal } from "react-icons/hi";
 import { MdComputer } from "react-icons/md";
 import { LuPenTool } from "react-icons/lu";
-import { FaSpotify } from "react-icons/fa";
+import { FaMusic } from "react-icons/fa6";
 import { FaVolleyball } from "react-icons/fa6";
 import portpic from "../assets/portfolio-pic.jpg";
 import { useEffect, useRef } from "react";
@@ -78,9 +78,9 @@ const About = () => {
       >
         about
       </span>
-      <div className="flex flex-col lg:flex-row items-center">
+      <div className="flex flex-col gap-5 lg:flex-row items-center">
         <img
-          className="pic rounded-lg object-cover size-1/2 lg:mr-10 lg:mb-0 mb-10"
+          className="pic rounded-lg object-cover md:size-1/2 lg:mr-10"
           src={portpic}
           alt=""
         />
@@ -114,7 +114,7 @@ const About = () => {
             </span>
           </div>
           <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-all duration-300 pr-5 py-3 rounded-2xl">
-            <FaSpotify className="size-[3.5em] mx-5" />
+            <FaMusic className="size-[3.5em] mx-5" />
             <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
               My favorite artists are Nujabes and The Strokes, and I like
               artists from various other genres.

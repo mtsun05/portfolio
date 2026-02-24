@@ -41,7 +41,7 @@ function App() {
             homeVisible
               ? "opacity-100 blur-none translate-y-0"
               : "opacity-0 blur-lg translate-y-30"
-          } transition-all duration-1000 flex flex-col text-center justify-center items-center lg:w-2/3 mx-10 text-black dark:text-white mt-70 mb-20`}
+          } transition-all duration-1000 flex flex-col text-center justify-center items-center lg:w-2/3 mx-10 text-black dark:text-white mt-40 md:mt-70 mb-20`}
         >
           <span
             id="home"
@@ -50,9 +50,8 @@ function App() {
             Michael Sun
           </span>
           <span className="fade-in ease-in text-center md:text-3xl text-black dark:text-gray-200 mb-3">
-            I'm a junior at the University of Illinois Urbana Champaign. <br />{" "}
-            My interests lie in large-scale full stack and frontend development.{" "}
-            <br />
+            I'm a junior in CS+Econ at UIUC. <br /> My interests lie in
+            large-scale full stack and frontend development. <br />
           </span>
           <div className="flex flex-col items-center md:flex-row md:gap-5">
             <a
@@ -118,6 +117,7 @@ function App() {
           <ExpCard
             company="Illini Electric Motorsports"
             title="Lead Frontend Developer"
+            link="https://d3vj44oer6ybvg.cloudfront.net/"
             imgLink={dark ? IEMlogowhite : IEMlogoblack}
           >
             Leading the website redesign team in a drastic improvement of the

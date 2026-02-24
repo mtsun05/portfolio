@@ -20,10 +20,10 @@ const ProjectCard = ({
 }: ProjCardProps) => {
   return (
     <div className="flex flex-col bg-[#e6e6e6] dark:bg-[#151515] rounded-lg p-5 my-2 hover:ring-1 ring-neutral-600 cursor-default text-black dark:text-white transition-all duration-300">
-      <div className="flex flex-row items-baseline mb-3 transition-all duration-300">
+      <div className="flex flex-col md:flex-row md:items-center mb-3 transition-all duration-300">
         <span className="text-xl font-bold">{label}</span>
         {techs && (
-          <span className="justify-end text-sm mx-3 italic underline">
+          <span className="justify-end text-sm md:mx-3 font-light italic underline">
             {techs}
           </span>
         )}
