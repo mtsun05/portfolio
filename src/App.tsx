@@ -8,12 +8,16 @@ import About from "./components/About.tsx";
 import { useRef } from "react";
 import { useIsVisible } from "./util/visibilityDetector";
 
-import IEMlogo from "./assets/iem-logo-removebg-preview.png";
+import IEMlogowhite from "./assets/iem_logo_monochrome_white.png";
+import IEMlogoblack from "./assets/iem_logo_monochrome_black.png";
+import pcodelogo from "./assets/pcodelogo.svg";
 import illini from "./assets/illini-logo.png";
 
 import { TbArrowUpRight } from "react-icons/tb";
+import { useTheme } from "./themeContext.tsx";
 
 function App() {
+  const { dark, toggleTheme } = useTheme();
   const homeRef = useRef<HTMLDivElement>(null);
   const homeVisible = useIsVisible(homeRef, 0.3);
 
@@ -52,7 +56,7 @@ function App() {
           </span>
           <div className="flex flex-col items-center md:flex-row md:gap-5">
             <a
-              href=""
+              href="mailto:mtsun05@gmail.com"
               className="group flex flex-row items-center text-neutral-400 lg:text-lg"
               target="_blank"
               rel="noopener noreferrer"
@@ -103,13 +107,25 @@ function App() {
           <span className="dark:text-white mb-5 text-black italic text-5xl">
             experience
           </span>
-          <ExpCard label="Lead Frontend Developer" imgLink={IEMlogo}>
+          <ExpCard
+            company="Project:Code"
+            title="Software Engineer"
+            imgLink={pcodelogo}
+          >
+            Implementing vector embeddings and search in a mobile lost-and-found
+            app
+          </ExpCard>
+          <ExpCard
+            company="Illini Electric Motorsports"
+            title="Lead Frontend Developer"
+            imgLink={dark ? IEMlogowhite : IEMlogoblack}
+          >
             Leading the website redesign team in a drastic improvement of the
             club website. Modernizing and improving UI, reorganizing information
             sections and making them more digestible, added a 3D showcase for
             the team car, and working on deploying with AWS S3.
           </ExpCard>
-          <ExpCard label="CS124 Course Staff" imgLink={illini}>
+          <ExpCard company="UIUC" title="CS124 Course Staff" imgLink={illini}>
             Taught beginner programmers in 1-on-1 sessions about core
             programming concepts in Java. Assisted students in an
             end-of-the-year Android project.
@@ -133,7 +149,6 @@ function App() {
             label="Link"
             techs="React, Node.js, MongoDB, Express, Vercel, JWT, OAuth2.0"
             githubURL="https://github.com/mtsun05/link"
-            websiteURL="https://link-sable-three.vercel.app"
           >
             Social community platform built for centralizing events for clubs.
             Implemented authentication with JWTs and OAuth2.0 (sign in with
@@ -151,7 +166,7 @@ function App() {
           </ProjectCard>
         </div>
         <About />
-        <span className="text-5xl mt-20 text-black dark:text-white transition-all duration-1000">
+        <span className="text-5xl mt-20 text-black text-center dark:text-white transition-all duration-1000">
           Thank you for visiting!
         </span>
         <footer className="mb-10 mt-40 text-black dark:text-white transition-all duration-1000">

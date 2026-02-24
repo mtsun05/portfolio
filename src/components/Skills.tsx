@@ -35,19 +35,22 @@ const Skills = () => {
             toggleActions: "play none none none",
           },
         },
-        0.3
+        0.3,
       );
     }
   }, []);
 
   return (
-    <div ref={wrapper} className="flex flex-row flex-wrap gap-3 justify-center">
+    <div
+      ref={wrapper}
+      className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 flex-wrap gap-3 justify-center"
+    >
       {icons.map(({ icon: Icon, color, label, desc }, index) => {
         return (
           <div
             onMouseEnter={() => setActive(index)}
             onMouseLeave={() => setActive(-1)}
-            className="skill-card flex flex-row bg-[#e6e6e6] dark:bg-[#121212] px-4 py-3 gap-5 w-[200px] rounded-lg items-center cursor-default transition-all duration-300"
+            className="skill-card flex flex-row bg-[#e6e6e6] dark:bg-[#151515] px-4 py-3 gap-5 w-[200px] rounded-lg items-center cursor-default transition-all duration-300"
           >
             <IconContext.Provider
               value={{
