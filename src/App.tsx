@@ -16,6 +16,13 @@ import illini from "./assets/illini-logo.png";
 import { TbArrowUpRight } from "react-icons/tb";
 import { useTheme } from "./themeContext.tsx";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
+
 function App() {
   const { dark } = useTheme();
   const homeRef = useRef<HTMLDivElement>(null);
@@ -29,6 +36,54 @@ function App() {
 
   const experienceRef = useRef<HTMLDivElement>(null);
   const experienceVisible = useIsVisible(experienceRef, 0.3);
+
+  useGSAP(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: experienceRef.current,
+        start: "top 70%",
+      },
+    });
+
+    tl.fromTo(
+      ".exp-card",
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        duration: 1,
+        ease: "back.out",
+      },
+    );
+  }, []);
+
+  useGSAP(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: projectsRef.current,
+        start: "top 70%",
+      },
+    });
+
+    tl.fromTo(
+      ".project-card",
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        duration: 1,
+        ease: "back.out",
+      },
+    );
+  }, []);
 
   return (
     <>
@@ -111,19 +166,21 @@ function App() {
             title="Software Engineer"
             imgLink={pcodelogo}
           >
-            Implementing vector embeddings and search in a mobile lost-and-found
-            app
+            Integrated multimodal similarity search into a mobile lost-and-found
+            app using vector embeddings. Developed a FastAPI microservice that
+            uses CLIP to generate embeddings and store them in Pinecone,
+            allowing for efficient storage and querying.
           </ExpCard>
           <ExpCard
             company="Illini Electric Motorsports"
-            title="Lead Frontend Developer"
-            link="https://d3vj44oer6ybvg.cloudfront.net/"
+            title="Website Lead"
+            link="https://illinielectricmotorsports.com/"
             imgLink={dark ? IEMlogowhite : IEMlogoblack}
           >
-            Leading the website redesign team in a drastic improvement of the
-            club website. Modernizing and improving UI, reorganizing information
-            sections and making them more digestible, added a 3D showcase for
-            the team car, and working on deploying with AWS S3.
+            Built a new website from scratch for one of the largest engineering
+            clubs at UIUC. Completely redesigned and modernized UI with React
+            and GSAP. Deployed on AWS with a CloudFront CDN to minimize latency
+            and S3 buckets for assets and logging.
           </ExpCard>
           <ExpCard company="UIUC" title="CS124 Course Staff" imgLink={illini}>
             Taught beginner programmers in 1-on-1 sessions about core
@@ -145,6 +202,16 @@ function App() {
           >
             projects
           </span>
+          <ProjectCard
+            label="News Aggregator"
+            techs="Next.js, Claude API, FastAPI, AsyncIO"
+            githubURL="https://github.com/mtsun05/news-aggregator"
+          >
+            Application built for aggregating and summarizing news from left,
+            right, and center perspectives. Uses parallel calls to a custom
+            webpage parser to grab information, preprocesses using Haiku, and
+            synthesizes with Sonnet.
+          </ProjectCard>
           <ProjectCard
             label="Link"
             techs="React, Node.js, MongoDB, Express, Vercel, JWT, OAuth2.0"

@@ -28,33 +28,18 @@ const About = () => {
 
       tl.fromTo(
         ".pic",
-        {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-          duration: 3,
-          ease: "power4.out",
-        },
+        { opacity: 0 },
+        { opacity: 1, duration: 3, ease: "power4.out" },
       )
         .fromTo(
           ".about-span",
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            duration: 3,
-            ease: "power4.out",
-          },
+          { opacity: 0 },
+          { opacity: 1, duration: 3, ease: "power4.out" },
           0,
         )
         .fromTo(
           ".about-item",
-          {
-            opacity: 0,
-            y: -30,
-          },
+          { opacity: 0, y: -30 },
           {
             opacity: 1,
             y: 0,
@@ -85,44 +70,44 @@ const About = () => {
           alt=""
         />
         <div className="flex flex-col justify-between self-stretch gap-3">
-          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-all duration-300 pr-5 py-3 rounded-2xl">
+          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-[box-shadow,background-color] duration-300 pr-5 py-3 rounded-2xl">
             <FaHome className="size-[3.5em] mx-5" />
-            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
+            <span className="dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-colors duration-500 w-fit">
               I'm from Barrington, IL, a suburb 45 minutes away from Chicago.
               I've lived around here my whole life.
             </span>
           </div>
-          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-all duration-300 pr-5 py-3 rounded-2xl">
+          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-[box-shadow,background-color] duration-300 pr-5 py-3 rounded-2xl">
             <HiOutlineSwitchHorizontal className="size-[3.5em] mx-5" />
-            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
+            <span className="dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-colors duration-500 w-fit">
               I entered UIUC as a Psychology major, but decided it wasn't for me
               and pivoted to Computer Science.
             </span>
           </div>
-          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-all duration-300 pr-5 py-3 rounded-2xl">
+          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-[box-shadow,background-color] duration-300 pr-5 py-3 rounded-2xl">
             <MdComputer className="size-[3.5em] mx-5" />
-            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
+            <span className="dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-colors duration-500 w-fit">
               I've learned everything I know about computer science and software
               engineering in the last two years.
             </span>
           </div>
-          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-all duration-300 pr-5 py-3 rounded-2xl">
+          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-[box-shadow,background-color] duration-300 pr-5 py-3 rounded-2xl">
             <LuPenTool className="size-[3.5em] mx-5" />
-            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
+            <span className="dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-colors duration-500 w-fit">
               I have a strong background in graphic design, utilizing
               technologies like Adobe Illustrator and Figma.
             </span>
           </div>
-          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-all duration-300 pr-5 py-3 rounded-2xl">
+          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-[box-shadow,background-color] duration-300 pr-5 py-3 rounded-2xl">
             <FaMusic className="size-[3.5em] mx-5" />
-            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
+            <span className="dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-colors duration-500 w-fit">
               My favorite artists are Nujabes and The Strokes, and I like
               artists from various other genres.
             </span>
           </div>
-          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-all duration-300 pr-5 py-3 rounded-2xl">
+          <div className="about-item group flex flex-row justify-around items-center bg-[#e6e6e6] dark:bg-[#151515] hover:ring-1 ring-neutral-600 transition-[box-shadow,background-color] duration-300 pr-5 py-3 rounded-2xl">
             <FaVolleyball className="size-[3.5em] mx-5" />
-            <span className=" dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-all duration-500 w-fit">
+            <span className="dark:group-hover:text-neutral-300 group-hover:text-black text-neutral-500 dark:text-neutral-400 transition-colors duration-500 w-fit">
               I've been playing volleyball since high school. I mainly play
               indoor but I'm down for any format. I enjoy many other sports too!
             </span>
